@@ -1,5 +1,7 @@
 package com.venkat.demo
 
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
+
 object CollectionsMain {
 
   def main(args: Array[String]): Unit = {
@@ -11,16 +13,34 @@ object CollectionsMain {
     val tuple1 =  ("surender", "CHN")
     val tuple2 =  ("surender", "CHN","CHENNAI")
 
-    myList.foreach(elem => println(elem))
+    myArray.foreach(println)
+    myArray(0) = "Hadoop"
+    myArray.foreach(println)
 
-    myArray.foreach(i => println(i))
 
 
-    println(tuple1._1)
-    println(tuple1._2)
+    val myAbuffer =  ArrayBuffer("100", "101")
+    myAbuffer.append("102")
 
-    println(tuple2._3)
+    myAbuffer.foreach(println)
 
+
+    val cityMap = scala.collection.mutable.Map(
+      "CHN" -> "CHENNAI",
+      "BNG" -> "BANGALORE",
+      "HYD" -> "HYDERABAD",
+      "MUM" -> "MUMBAI"
+    )
+
+cityMap("BNG") = "BENGALURU"
+
+    cityMap.foreach(elem => println(elem._1))
+
+    val numbersMap = scala.collection.mutable.Map(
+      ("1", "one"),
+      ("2", "two")
+    )
+    numbersMap.foreach(println)
   }
 
 }
