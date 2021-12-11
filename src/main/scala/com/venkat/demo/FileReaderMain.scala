@@ -5,7 +5,7 @@ import com.venkat.utils.DemoUtils
 import scala.io.Source
 
 object FileReaderMain {
-
+  case class AtmTrans(account_id:String,atm_id:String,trans_dt:String,trans_amt:String,status:String)
   def main(args: Array[String]): Unit = {
 
     val fileLocMap = Map(
@@ -46,12 +46,23 @@ object FileReaderMain {
 
   def processAtmTrans(data:List[String]):List[String] = {
 
-    List("EMPTY")
+    data
+      .filter(rec => rec.endsWith("S"))
+      .map(rec => {
+        var arr = rec.split("\\|")
+        AtmTrans(arr(0),arr(1),arr(2),arr(3),arr(4))
+      })
+      .filter(atmTrans => atmTrans.trans_amt.toInt > 3000)
+      .map(atmTrans => doConcat(atmTrans.account_id,atmTrans.trans_dt,atmTrans.trans_amt))
   }
 
   def processOrders(data:List[String]):List[String] = {
 
     List("EMPTY")
+  }
+
+  def doConcat(s1:String,s2:String,s3:String):String = {
+    s"$s1,$s2,$s3"
   }
 
 }
