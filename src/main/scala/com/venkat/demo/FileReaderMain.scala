@@ -57,8 +57,11 @@ object FileReaderMain {
   }
 
   def processOrders(data:List[String]):List[String] = {
+    data
+      .map(elem => elem.split(",")(3))
+      .toSet
+      .toList
 
-    List("EMPTY")
   }
 
   def doConcat(s1:String,s2:String,s3:String):String = {

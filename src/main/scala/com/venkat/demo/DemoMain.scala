@@ -1,6 +1,6 @@
 package com.venkat.demo
 
-import com.venkat.etl.Sample
+import com.venkat.etl.{ BaseDemo,Sample}
 
 object DemoMain {
 
@@ -14,6 +14,10 @@ object DemoMain {
     Demo.demoProcess()
     Demo.demoProcess()
     Sample.processSample()
+    //BaseDemo.baseProcess()
+
+    val baseObj = new BaseDemo()
+    baseObj.baseProcess()
 
   }
 
