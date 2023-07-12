@@ -1,7 +1,9 @@
 package com.venkat.demo
 
 import com.venkat.etl.{ BaseDemo,Sample}
-
+/*
+This is a DemoMain object ,
+ */
 object DemoMain {
 
   def main(args: Array[String]): Unit = {
@@ -13,7 +15,7 @@ object DemoMain {
     process()
     Demo.demoProcess()
     Demo.demoProcess()
-    Sample.processSample()
+
     //BaseDemo.baseProcess()
 
     val baseObj = new BaseDemo()

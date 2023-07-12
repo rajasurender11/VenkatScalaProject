@@ -6,7 +6,7 @@ object SampleMain {
     val str = "surender"
     println(s"This is the main method of  SampleMain $str")
 
-    val result1 = doProcess1()
+    val result1 = doProcess1() //
 
     println(s"result1 $result1")
 

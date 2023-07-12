@@ -9,15 +9,18 @@ object CollectionsMain {
     val str = "hadoop"
     val myList = List("surender", "raja", "Ajay")
     val myList1 = List(1,2,3)
-    val myArray = Array("surender", "one", "two")
+    val myArray = Array("surender", "one", "two")// immutable
     val tuple1 =  ("surender", "CHN")
     val tuple2 =  ("surender", "CHN","CHENNAI")
 
     myArray.foreach(println)
+    //myArray.foreach(elem => println(elem))
     myArray(0) = "Hadoop"
     myArray.foreach(println)
 
+    println(tuple1._2)
 
+println("***********************************************")
 
     val myAbuffer =  ArrayBuffer("100", "101")
     myAbuffer.append("102")

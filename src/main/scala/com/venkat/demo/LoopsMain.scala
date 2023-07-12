@@ -66,6 +66,12 @@ object LoopsMain {
 
 
     testList.foreach(elem => println("#7 Foreach iteration " + elem))
+
+
+
+
   }
+
+
 
 }
