@@ -27,6 +27,8 @@ object DemoMain {
 //println("This is process method")
     val name = "venkat"
     Demo.demoProcess()
+    val obj1 = new BaseDemo()
+    obj1.baseProcess2()
   }
 
 }

@@ -1,6 +1,6 @@
 package com.venkat.etl
 
-object Sample {
+object Sample  extends BaseDemo {
 
   def processSample():Unit = {
 

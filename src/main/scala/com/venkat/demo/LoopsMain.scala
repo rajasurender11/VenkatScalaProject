@@ -12,6 +12,23 @@ object LoopsMain {
       m+n
 
     }
+   //if(1>0) true
+    if(i > 0 ){
+      println(s"simple if  ${i+6} ${j}")
+
+    }
+    i = i+9
+
+    if(i < 0 ){
+              if(i == -1) {
+
+                   }
+       println(s"simple if ${i}")
+
+    }
+    else {
+      println(s"simple else ${i}")
+    }
 
     if(i > 0){
       println(" GREATER THAN 0")
@@ -25,7 +42,7 @@ object LoopsMain {
       println("ZERO")
     }
 
-
+println("####################################")
 
     while (i <= 10) {
       println("#1 while loop Iteration " + i)
@@ -39,7 +56,7 @@ object LoopsMain {
     }
 
     val testList = List("CHN", "BNG", "HYD")
-    val listSize = testList.size//2
+    val listSize = testList.size//3
     var itr = 0
     if (testList.nonEmpty || listSize > 0) {
 
