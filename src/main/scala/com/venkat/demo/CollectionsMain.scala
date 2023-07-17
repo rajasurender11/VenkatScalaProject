@@ -8,7 +8,9 @@ object CollectionsMain {
     val id = 1090
     val str = "hadoop"
     val myList = List("surender", "raja", "Ajay")
-    val myList1 = List(1,2,3)
+    val myNewList = List(1,"surender",1.2)
+    val bufferList = myList.toBuffer
+     val myList1 = List(1,2,3)
     val myArray = Array("surender", "one", "two")// immutable
     val tuple1 =  ("surender", "CHN")
     val tuple2 =  ("surender", "CHN","CHENNAI")

@@ -17,9 +17,9 @@ object FileReaderMain {
     fileLocMap.foreach(elem => {
       println("###################################")
       println(s"processing for ${elem._1}")
-      val fileName = elem._1
+      val fileName = elem._1// accounts_profile
       val filePath = elem._2
-      val fileData = DemoUtils.readLocalFileAsList(filePath)
+      val fileData = DemoUtils.readLocalFileAsList(filePath) //arg
 
 
       val resultList = fileName.toUpperCase() match {
@@ -35,7 +35,7 @@ object FileReaderMain {
 
   def processAccountsProfile(data:List[String]):List[String] = {
     data
-      .zipWithIndex
+      .zipWithIndex // List((datastring,0) (datastring,1))
       .map(rec => (rec._1,rec._2+1))
       .filter(rec => rec._2%2 != 0)
       .map(rec => rec._1)
